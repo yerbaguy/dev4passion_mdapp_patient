@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 //import 'package:dev4passion_mdapp_/screens/drawer/Sidemenu.dart';
+//import 'package: dev4passion_mdapp_patient/screens/drawer/SideMenu.dart';
 
 class Home extends StatefulWidget {
   const Home({ Key? key }) : super(key: key);
@@ -13,6 +14,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
    return Scaffold(
       // drawer: Sidemenu(),
+     // drawer: SideMenu(),
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
