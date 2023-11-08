@@ -1,3 +1,7 @@
+import 'package:firebase_core/firebase_core.dart';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 import 'package:flutter/material.dart';
 import 'package:dev4passion_mdapp_patient/screens/home/home.dart';
 
@@ -14,7 +18,19 @@ import 'notes.dart';
 import 'notifications.dart';
 
 
-void main() {
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// Future void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await Firebase.initializeApp();
+//   runApp(const MyApp());
+// }
+
+Future <void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -97,6 +113,63 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
+
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(icon: Icon(Icons.home),
+        label: 'Home',
+        ),
+
+        BottomNavigationBarItem(icon: Icon(Icons.home),
+        label: 'Home',
+        ),
+
+
+      ],),
+
+
+
+      // bottomNavigationBar: BottomAppBar(
+
+      //   shape: CircularNotchedRectanle(),
+      //   notchMargin: 10,
+      //   child: Container(
+      //     height: 60,
+      //     child: row(
+      //       crossAxissAlignment: CrossAxisAlignment.start,
+      //       children: [
+      //         MaterialButton(
+      //           minWidth: 50,
+      //           onPressed: (){
+      //             setState(() {
+      //               currentScreen = Settings();
+      //               // currentIndex = 0;
+      //               currentPage = 0;
+      //             });
+
+      //           },
+
+      //           child: Column (
+      //             mainAxisAlignment: MainAxisAlignment.center,
+      //             children: [
+      //               Icon(
+      //                 Icons.home_filled,
+      //                 color: currentIndex == 0 ? Colors.pinkAccent : Colors.grey,
+      //               ),
+      //               Text(
+      //                 "Home",
+
+      //               )
+      //             ],
+      //           ),
+      //         )
+      //       ]
+      //     )
+      //   )
+      // )
+
+
+
+
     );
   }
 
