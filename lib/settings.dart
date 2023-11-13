@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_database/firebase_database.dart';
 
+import 'package:dev4passion_mdapp_patient/screens/services/auth.dart';
+
 class SettingsPage extends StatefulWidget {
   @override
   _SettingsPageState createState() => _SettingsPageState();
@@ -17,6 +19,7 @@ class _SettingsPageState extends State<SettingsPage> {
   final userSalaryController = TextEditingController();
 
   late DatabaseReference dbRef;
+  final AuthService _auth = AuthService();
 
 
   @override
@@ -103,6 +106,29 @@ class _SettingsPageState extends State<SettingsPage> {
            dbRef.push().set(students);
           
           }, child: Text('Submit')
+
+             
+          ),
+
+           MaterialButton( onPressed: () async {
+
+
+           // print(dataToSave);
+           // dbRef.push().set(students);
+
+           //
+          //  dynamic result = await _auth.signInAnon();
+          //         if (result == null) {
+          //           print('error signing in');
+          //         } else {
+          //           print('Signed in');
+          //           print(result);
+          //         }
+            //
+
+            print("lkjsdlkfj");
+          
+          }, child: Text('SignIn Anon')
 
              
           ),

@@ -4,6 +4,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'package:flutter/material.dart';
 import 'package:dev4passion_mdapp_patient/screens/home/home.dart';
+import 'package:dev4passion_mdapp_patient/screens/authenticate/login_anon.dart';
+import 'package:dev4passion_mdapp_patient/screens/authenticate/signinanon.dart';
 
 import 'package:dev4passion_mdapp_patient/privacy_policy.dart';
 import 'package:dev4passion_mdapp_patient/send_feedback.dart';
@@ -55,8 +57,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      // home: Home(),
-      home: HomePage(),
+       // home: Home(),
+       home: Signinanon(),
+         //home: HomePage(), 
+           // home: LoginAnon(),
     );
   }
 }
